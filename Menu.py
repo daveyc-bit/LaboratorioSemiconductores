@@ -509,6 +509,18 @@ elif menu == "Estructura de Bandas de Energía":
         - $T$ es la temperatura en Kelvin
         """)
 
+    st.info(
+            f"""
+    ### Parámetros del material seleccionado: **{material}**
+
+    - **Ancho de banda a 0 K ($E_{{g0}}$):** {Eg0:.4f} eV
+    - **Constante de Varshni ($α$):** {alpha:.3e} eV/K²
+    - **Constante de Varshni ($β$):** {beta} K
+
+    Estas constantes son características de cada semiconductor y determinan cómo cambia el ancho de la banda prohibida con la temperatura. Un valor mayor de **α** implica una variación más pronunciada de $E_g$, mientras que **β** controla la rapidez con la que dicha variación ocurre conforme aumenta la temperatura.
+    """
+        )
+
     st.write(
             "La banda de conducción ($E_c$) representa los niveles de energía donde los electrones pueden "
             "moverse libremente y contribuir a la conducción eléctrica."
